@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<button id="disable-keyboard"></button>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+
+	$(document).on('keydown', 'body.readonly', function () {
+		return false;
+	});
+
+	$(function(){
+		$('#disable-keyboard').on('click', function (e) {
+			$('body').toggleClass('readonly');
+		});
+	});
+
+</script>
+</body>
+</html>
